@@ -11,7 +11,7 @@
     :root{
         --font-primary:"Baloo Da 2",serif;
         --font-secundary:"Josefin Slab:ital",serif;
-        --font-action:"Mulish",serif;
+        --font-action:"Mulish:ital",serif;
     }
     
     header{
@@ -21,19 +21,40 @@
         position: relative;
 
     }
+    /**.img-logo img{
+        width: 10rem;
+        height: 4rem;
+        position: absolute;
+        z-index: 100;
+        left:2rem;
+        top: 2rem;
+        
+        cursor: pointer;
+    }
+**/
 
+.img-logo img{
+        position: absolute;
+        width: 7rem;
+        height: 3rem;
+        z-index: 100;
+        left:7rem;
+        top: 1rem;
+        display: flex;
+    
+}
     .img-wrapper{
         width: 100%;
         height: 100%;   
         overflow: hidden;
-        background-color: rgba(46, 0, 88,0.7);
+        background-color: rgba(0, 0, 0, 0.644);
     }
 
     .img-wrapper img{
         width: 100%;
         height: 100%;   
         object-fit: cover; /** Faz com que a imagem se adpte a tela**/
-        opacity: 0.5;
+        opacity: 0.7;
         animation: zoom 10s;
     }
 
@@ -53,11 +74,11 @@
     }
 
     .banner h1{
-        color: white;
+        color: #016628;
         font-size: 3.5rem;
         font-family: var(--font-primary);
         font-weight: 200; /** diminui o negrito**/
-        text-shadow: .1rem .3rem 1px rgba(0, 0,0, .6); /* coloca uma sompra na letra*/
+        text-shadow: .1rem .3rem 1px rgba(255, 255, 255, 0.6); /* coloca uma sompra na letra*/
         margin-bottom: -0.5rem;
         opacity: 0;
         animation: moveBanner 0.8s 0.7s forwards;
@@ -76,65 +97,73 @@
         
     }
     .sadebar{
-        width: 20rem;
-        height: 100vh;
-        background-color: rgb(98, 28, 145);
+        width: 100%;
+        height: 5rem;
+        background-color: rgb(255, 255, 255);
         position:fixed;
-        top: 0;
-        right: -20rem;
+        top: -20rem;
         transition: all 1s;
         opacity: 85%;
     }
 
     .show-menu .sadebar{
-        right: 0;
+        top: 0;
     }
 
     .menu{
         position: absolute;
         top: 40%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        left: 60%;
+        transform: -translate(50%,-50%);
+     
+        left: 45rem;
+     
 
     }
 
     .menu-item{
         text-align: center;
+        line-height: 8px;
+        padding: 1px 10px;
+        display: inline-block;
+       
+
     }
 
     .menu-link{
         font-family: var(--font-action);
-        color:rgb(255, 123, 0);
+        color:rgb(0, 0, 0);
         font-size: 1.5rem;
         transition: color 0.4s;
-        
     }
 
     .social-media{
         position: absolute;
-        bottom: 2rem;
+        bottom: 1rem;
+        top: 1rem;
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        left: 75rem;
+        
     }
-
     .social-media i{
         
         height: 2.5rem ;
         width: 2.5rem;
         font-size: 2rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items:center;
         border-radius: 50%;
         transition: background-color 0.5s;
+        right: 10rem;
     }
 
     .social-media i:hover{
         background-color: rgba(0, 0, 0, 0.075)
+    
     }
     .menu-link:hover{
-        color: #ffffff;
+        color: #016628;
     }
 
 
@@ -165,29 +194,14 @@
 
  }
 
- .show-menu .hamburguer:hover span{
-     opacity: 1;
- }
-
- .hamburguer span::before{
-     content: "";
-     position: absolute;
-     border-right: .5rem solid chocolate;
-     border-top: .5rem solid transparent;
-     border-left: .5rem solid transparent;
-     border-bottom: .5rem solid transparent;
-     left: -1rem;
-
- }
-
  .hamburguer {
     /** background-color: white;**/
      width: 2rem;
      height: 2rem;
      position: fixed;
      z-index: 100;
-     right:2rem;
-     top: 2rem;
+     left:2rem;
+     top: 1.5rem;
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
@@ -222,3 +236,41 @@ background-color: #ffffff;
     transform: rotate(-45deg) translate(.2rem, -.6rem);
     background-color: #ffffff;
      }
+
+.sessao-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-header h1{
+    font-family: font --font-primary;
+    font-size: 3rem;
+    color: rgb(28, 145, 28);
+    border-bottom: solid 3px black;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.utilidades{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    width: 20rem;
+    height: 30rem;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    border-radius: .5rem;
+}
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+}
